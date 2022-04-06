@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      strict: false
+      datasource:
+        master:
+          username: root
+          password: root
+          url: jdbc:mysql://localhost:3306/mybatis_plus?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        slave_1:
+          username: root
+          password: root
+          url: jdbc:mysql://localhost:3306/mybatis_plus_01?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+          driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  type-enums-package: com.feng.enums
